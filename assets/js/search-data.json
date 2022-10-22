@@ -6,9 +6,9 @@
 
   
       "page1": {
-          "title": "About Me",
+          "title": "About Us",
           "content": "This is our Ivy League College Calculator. . Students will enter certain data about them and this program will determine the chance that they have of getting into each Ivy League college. .",
-          "url": "https://davidvasilev1.github.io/group-project/about/",
+          "url": "https://davidvasilev1.github.io/Ivy-League-Calculator/about/",
           "relUrl": "/about/",
           "date": ""
       }
@@ -40,7 +40,7 @@
       ,"page10": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
-          "url": "https://davidvasilev1.github.io/group-project/robots.txt",
+          "url": "https://davidvasilev1.github.io/Ivy-League-Calculator/robots.txt",
           "relUrl": "/robots.txt",
           "date": ""
       }
