@@ -4,8 +4,6 @@ title: About Me
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+This is our Ivy League College Calculator.
 
-
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+Students will enter certain data about them and this program will determine the chance that they have of getting into each Ivy League college.
