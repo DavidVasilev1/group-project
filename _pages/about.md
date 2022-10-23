@@ -113,4 +113,16 @@ In order to document the development process, we will be using GitHub Issues. Th
 We will also blog about our experiences and findings on a weekly basis on this Fastpages site. This will allow for users of the program that are also interested in our processes to easily access our journey. This will include screenshots of the code, as well as explanations of what we did.
 
 #### Feature Expectations
+>
+Features are what we expect the program to contain and do in order for it to reach its intended goals. This means that the program will have features in both the front-end and back-end section.
 
+![]({{site.baseurl}}/images/features.png)
+
+These are some of our features and below we have described each feature.
+
+- <font color="#ffffc2">Project Documentation</font>this is where we will document on Fastpages what we have done each week and how we have done everything
+- <font color="#ffffc2">Textboxes and Buttons</font>these are part of the user interface and are how the user interacts with the program in order to receive an output
+- <font color="#ffffc2">Data API</font>this is what will hold the data that will be used to determine the percentage that the students have of getting into each college
+- <font color="#ffffc2">Reading Textbox and Button Input</font>this will be how the program gathers data from the user and compares it to the data in the API, from which the program will calculate the percentage that the student has of getting into each college
+
+All of these features will be expected to have a minimal amount of code, as we want efficiency in our program. We will also have feature reviews and demos from which we will obtain feedback and improve the features or add new features that the consumers want to see. We will do this every sprint meeting when we decide what we will work on for the week.
