@@ -4,7 +4,7 @@ comments: true
 layout: post
 title:  User Interface
 description: The Project's UI
-permalink: /week1
+permalink: /project
 categories: [Week 1]
 ---
 
