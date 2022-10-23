@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Ivy League Calculator
-description: An easy to use blogging platform with support for Jupyter Notebooks.
+description: A calculator that uses student data to determine your chance of getting into the Ivy League.
 github_username: DavidVasilev1
 # you can comment the below line out if your repo name is not different than your baseurl
 github_repo: "group-project"
