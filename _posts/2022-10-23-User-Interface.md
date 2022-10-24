@@ -8,7 +8,7 @@ permalink: /week1
 categories: [Week 1]
 ---
 
-# Please input your academic traits + essay grade. 
+# Please input your academic traits and essay grade. 
 # .
 
 
