@@ -41,7 +41,7 @@ Please Select Your Gender:
 function eth()
 {
 var ethnicityList=document.getElementById("ethnicityList");
-document.getElementById("ethnicity").value=ethnicityList.options[ethnicityList.selectedIndex].text;
+document.getElementById("ethnicity").innerHTML=ethnicityList.options[ethnicityList.selectedIndex].text;
 }
 </script>
 <body>
@@ -55,7 +55,7 @@ Please Select Your Ethnicity:
     <option> Asian </option>  
     <option> Other </option>  
 </select>
-<p>Your selected ethnicity is: <input type = "text" id = "ethnicity" size = "20"></p>
+<p>Your selected ethnicity is: <font color = "#ffffc2"><t id = "ethnicity"></t></font></p>
 </form>
 
 </body>
@@ -68,7 +68,7 @@ Please Select Your Ethnicity:
 function maj()
 {
 var majorList=document.getElementById("majorList");
-document.getElementById("major").value=majorList.options[majorList.selectedIndex].text;
+document.getElementById("major").innerHTML=majorList.options[majorList.selectedIndex].text;
 }
 </script>
 <body>
@@ -85,7 +85,7 @@ Please Select Your Major:
     <option> English </option>
     <option> Other </option>
 </select>
-<p>Your selected major is: <input type = "text" id = "major" size = "20"></p>
+<p>Your selected major is: <font color = "#ffffc2"><t id = "major"></t></font></p>
 </form>
 
 </body>
