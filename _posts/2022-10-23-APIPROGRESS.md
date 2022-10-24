@@ -8,40 +8,21 @@ permalink: /api
 categories: [Week 1]
 ---
 
-<!DOCTYPE html> 
+# API 
 
-<html lang="en"> 
+To emphasize, as a backend developer, I constructed a data sheet full of plausible statistics for each ivy league college. The data was then transferred as an API through a CSV file, through this, we will now be able to integrate a calculator that bases off wether a student is eligible for any of these colleges through the data that is stored. 
 
-  <head> 
+![]({{site.baseurl}}/images/API.png)
 
-  <title> Table </title>               
+ORIGINAL GOOGLE SHEET:
+![]({{site.baseurl}}/images/debug3.png)
 
-  </head> 
+## Flask Issue
+Currently we are trying to figure out why the table/API only works in the backend developer's personal flask, we tried to transfer it to our group's fastpages, but it kept on not working, we decided this will be our debugging issue. 
 
- <body> 
+![]({{site.baseurl}}/images/debug1.png)
+![]({{site.baseurl}}/images/debug2.png)
 
-<div align="center"> 
+Above is the API, through table.html the table was imported under the templates folder in the flask. 
 
- <table> 
 
- <h1> 
-
- <!--Displaying the converted table-->
-
-  {% for table in tables %} 
-
- <h2>{{titles[loop.index]}}</h2>                             
-
- {{ table|safe }} 
-
- {% endfor %}      
-
- </h1>  
-
- </table> 
-
- </div> 
-
- </body> 
-
-</html>
