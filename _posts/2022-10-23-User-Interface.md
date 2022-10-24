@@ -14,11 +14,10 @@ categories: [Week 1]
 
 <html>
 <script>
-function gen()
-{
-var genderList=document.getElementById("genderList");
-document.getElementById("gender").value=genderList.options[genderList.selectedIndex].text;
-}
+function gen() {
+    var genderList = document.getElementById("genderList");
+    document.getElementById("gender").innerHTML = genderList.options[genderList.selectedIndex].text;
+  }
 </script>
 <body>
 <form>
@@ -28,7 +27,8 @@ Please Select Your Gender:
     <option> Male </option>  
     <option> Female </option>  
 </select>
-<p>Your selected gender is: <input type = "text" id = "gender" size = "20"></p>
+
+<p>Your selected gender is: <font color = "#ffffc2"><t id = "gender"></t></font></p>
 </form>
 
 </body>
