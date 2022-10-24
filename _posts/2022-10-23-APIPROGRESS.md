@@ -8,4 +8,40 @@ permalink: /week1
 categories: [Week 1]
 ---
 
-# API 
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+  <head> 
+
+  <title> Table </title>               
+
+  </head> 
+
+ <body> 
+
+<div align="center"> 
+
+ <table> 
+
+ <h1> 
+
+ <!--Displaying the converted table-->
+
+  {% for table in tables %} 
+
+ <h2>{{titles[loop.index]}}</h2>                             
+
+ {{ table|safe }} 
+
+ {% endfor %}      
+
+ </h1>  
+
+ </table> 
+
+ </div> 
+
+ </body> 
+
+</html>
