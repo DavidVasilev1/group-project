@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "User Interface",
-            "content": "Please input your academic traits and essay grade. . . . Please Select Your Gender: Choose Gender Male Female Your selected gender is: . .",
+            "content": "Please input your academic traits and essay grade. . . . Please Select Your Gender: Choose Gender Male Female Your selected gender is: . . Please Select Your Ethnicity: Choose Ethnicity White Hispanic African-American Asian Other Your selected ethnicity is: . . Please Select Your Major: Choose Major Computer Science Business Biology Politics Engineering Social Sciences English Other Your selected major is: . .",
             "url": "https://davidvasilev1.github.io/group-project/project",
             "relUrl": "/project",
             "date": " • Oct 23, 2022"
