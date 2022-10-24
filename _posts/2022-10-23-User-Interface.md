@@ -99,7 +99,7 @@ Please Select Your Major:
 
 
 
-
+<!-- Here below is the html code for the textboxes for the students to input their stats -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -127,8 +127,7 @@ document.getElementById("gpabutton").onclick = function(){
 </html>
 <p>Your GPA is: <font color = "#ffffc2"><t id = "gpa"></t></font></p>
 
-
-
+<!-- The code above isn't able to properly reiterate the inputted values, needs some work -->
 
 
 
