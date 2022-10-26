@@ -8,7 +8,7 @@ permalink: /project
 categories: [Week 1]
 ---
 
-# Input your academic traits below. 
+# Please input your academic traits below. 
 # --------------------------------
 
 <!-- Dropdown: Genders  -->
