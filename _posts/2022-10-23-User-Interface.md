@@ -11,8 +11,17 @@ categories: [Week 1]
 # Input your academic traits below. 
 # --------------------------------
 
-<!-- This here is the code for a dropdown menu regarding genders.  -->
+<!-- Dropdown: Genders  -->
 <html>
+  <style>
+    body {
+      font-size: 18px !important;
+    }
+    select {
+      text-align: center !important;
+      left: 50% !important;
+    }
+  </style>
   <script>
   function gen() {
       var genderList = document.getElementById("genderList");
@@ -20,9 +29,9 @@ categories: [Week 1]
     }
   </script>
   <body>
-<!-- Here below are the options from which the inputter may choose from.  -->
+<!-- Choices  -->
     <form>
-      Please Select Your Gender:
+      <p id="dropdown">Please Select Your Gender:</p>
         <select id="genderList" onchange="gen()">
             <option> ---Choose Gender--- </option>  
             <option> Male </option>  
@@ -32,7 +41,7 @@ categories: [Week 1]
     </form>
   </body>
 </html>
-<!-- This here is the code for a dropdown menu regarding numerous ethnicities.  -->
+<!-- Dropdown: Ethnicity  -->
 <html>
   <script>
     function eth() {
@@ -41,7 +50,7 @@ categories: [Week 1]
     }
   </script>
   <body>
-<!-- Here below are the options from which the inputter may choose from.  -->
+<!-- Choices  -->
     <form>
       Please Select Your Ethnicity:
         <select id="ethnicityList" onchange="eth()">
@@ -56,7 +65,7 @@ categories: [Week 1]
     </form>
   </body>
 </html>
-<!-- This here is the code for a dropdown menu regarding numerous majors.  -->
+<!-- Dropdown: Majors  -->
 <html>
   <script>
   function maj() {
@@ -65,7 +74,7 @@ categories: [Week 1]
     }
   </script>
   <body>
-<!-- Here below are the options from which the inputter may choose from.  -->
+<!-- Choices  -->
     <form>
       Please Select Your Major:
         <select id="majorList" onchange="maj()">
@@ -83,7 +92,62 @@ categories: [Week 1]
     </form>
   </body>
 </html>
-<!-- Here below is the html code for the textboxes for the students to input their stats -->
+<!-- Textboxes -->
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+        .slidecontainer {
+          width: 100%;
+        }
+        .sliders {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 10px;
+          border-radius: 5px;
+          background: #878787 !important;
+          outline: none;
+          opacity: 0.8;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+        }
+        .sliders:hover {
+          opacity: 1;
+        }
+        .sliders::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background: #ffffff;
+          outline: #ffffff;
+          cursor: pointer;
+        }
+        .sliders::-moz-range-thumb {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: #ffffff;
+          cursor: pointer;
+        }
+      </style>
+    </head>
+  <body>
+    <div class="slidecontainer">
+      <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange">
+      <p>Your GPA is: <span id="demo"></span></p>
+    </div>
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.innerHTML = slider.value;
+      slider.oninput = function() {
+        output.innerHTML = this.value;
+      }
+    </script>
+  </body>
+</html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
