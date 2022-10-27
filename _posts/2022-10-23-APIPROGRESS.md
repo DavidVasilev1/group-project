@@ -26,5 +26,6 @@ Currently we are trying to figure out why the table/API only works in the backen
 Above is the API, through table.html the table was imported under the templates folder in the flask. 
 
 Addition
+Addition
 
 
