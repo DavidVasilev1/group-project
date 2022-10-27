@@ -101,7 +101,7 @@ window.onload = wrap_img;
 <!-- Dropdown: Genders  -->
 <html>
   <style>
-    .dropdownMain {
+    body {
       font-size: 18px !important;
     }
     select {
@@ -115,7 +115,7 @@ window.onload = wrap_img;
       document.getElementById("gender").innerHTML = genderList.options[genderList.selectedIndex].text;
     }
   </script>
-  <body id="dropdownMain">
+  <body>
 <!-- Choices  -->
     <form>
       <!-- Dropdown: Gender -->
@@ -192,7 +192,7 @@ window.onload = wrap_img;
           width: 100%;
         }
         .sliders {
-          -webkit-appearance: antialiased;
+          -webkit-appearance: none;
           width: 100%;
           height: 10px;
           border-radius: 5px;
