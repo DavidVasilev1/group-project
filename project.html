@@ -95,15 +95,19 @@ window.onload = wrap_img;
     </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="please-input-your-academic-traits-below">Please input your academic traits below.</h1>
-<h1>——————————–</h1>
+    <h1 style="text-align:center"> Enter Your Academic Traits </h1>
+<style>
+  hr.line1 {
+    border: 2px solid white;
+    background: white;
+  }
+</style>
+
+<hr class="line1" />
 
 <!-- Dropdown: Genders  -->
 <html>
   <style>
-    .dropdownMain {
-      font-size: 18px !important;
-    }
     select {
       text-align: center !important;
       left: 50% !important;
@@ -115,21 +119,28 @@ window.onload = wrap_img;
       document.getElementById("gender").innerHTML = genderList.options[genderList.selectedIndex].text;
     }
   </script>
-  <body id="dropdownMain">
+  <body>
 <!-- Choices  -->
     <form>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      <!-- Dropdown: Gender -->
+      <p style="font-size:20px;">Please Select Your Gender: <font color="#ffffc2"><t id="gender"></t></font></p>
+      <div style="text-align: center;">
+        <select id="genderList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="gen()">
+=======
       <!-- Dropdown: Gender; could maybe incorporate a transgender option -->
       <p id="dropdown">Please Select Your Gender:</p>
         <select id="genderList" onchange="gen()">
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; e8b8ec463dbdcd07475f6f09d2986beae381e05d
             <option> ---Choose Gender--- </option>  
             <option> Male </option>  
             <option> Female </option>
-            <option> Other </option>  
+            <option> Other </option>
         </select>
-      <p>Your selected gender is: <font color="#ffffc2"><t id="gender"></t></font></p>
-    </form>
-  </body>
-</html>
+      &lt;/div&gt;
+    &lt;/form&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
 <!-- Dropdown: Ethnicity  -->
 <html>
   <script>
@@ -141,8 +152,9 @@ window.onload = wrap_img;
   <body>
 <!-- Choices  -->
     <form>
-      Please Select Your Ethnicity:
-        <select id="ethnicityList" onchange="eth()">
+      <p style="font-size:20px;">Please Select Your Ethnicity: <font color="#ffffc2"><t id="ethnicity"></t></font></p>
+      <div style="text-align: center;">  
+        <select id="ethnicityList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="eth()">
             <option> ---Choose Ethnicity--- </option>  
             <option> White </option>  
             <option> Hispanic </option>  
@@ -150,8 +162,8 @@ window.onload = wrap_img;
             <option> Asian </option>  
             <option> Other </option>  
         </select>
+      </div>
         <!-- Creates a different color font to differentiate user input and output  -->
-      <p>Your selected ethnicity is: <font color="#ffffc2"><t id="ethnicity"></t></font></p>
     </form>
   </body>
 </html>
@@ -167,8 +179,9 @@ window.onload = wrap_img;
 <!-- Choices  -->
 <!-- This needs to be fixed so that the "other" can be actually explained for the user -->
     <form>
-      Please Select Your Major:
-        <select id="majorList" onchange="maj()">
+      <p style="font-size:20px;">Please Select Your Major: <font color="#ffffc2"><t id="major"></t></font></p>
+      <div style="text-align: center;">  
+        <select id="majorList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="maj()">
             <option> ---Choose Major--- </option>  
             <option> Computer Science </option>  
             <option> Business </option>  
@@ -179,7 +192,7 @@ window.onload = wrap_img;
             <option> English </option>
             <option> Other </option>
         </select>
-      <p>Your selected major is: <font color="#ffffc2"><t id="major"></t></font></p>
+      </div>
     </form>
   </body>
 </html>
@@ -226,9 +239,14 @@ window.onload = wrap_img;
     </head>
     <!-- GPA Slider below-->
   <body>
+    <p>Please Select Your GPA: <span id="demo"></span></p>
     <div class="slidecontainer">
       <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange" />
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+      
+=======
       <p>Your unweighted GPA is: <span id="demo"></span></p>
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; e8b8ec463dbdcd07475f6f09d2986beae381e05d
     </div>
     <script>
       var slider = document.getElementById("myRange");
@@ -387,7 +405,8 @@ window.onload = wrap_img;
   </body>
 </html>
 <!-- Still need to incorporate API for this calculation button to work  -->
-<p><button>Calculate</button></p>
+<button>Calculate</button>
+</select></div></form></body></html>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
