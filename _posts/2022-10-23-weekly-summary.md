@@ -2,10 +2,10 @@
 toc: true
 comments: true
 layout: post
-title:  Week 1 Summary
-description: Summary of what we have done this week.
-permalink: /week1
-categories: [Week 1]
+title:  Weekly Progress Summaries
+description: Summary of what we have done every week.
+permalink: /weekly
+categories: [Weekly Summary]
 ---
 
 # Week 1 Summary
@@ -22,6 +22,19 @@ This week, I completed the entire layout of how the project is going to work for
 >
 This week, I worked on the frontend side of the calculator page that we are attempting to create. I utilized an integration of HTML and JavaScript on our FastPages site to create dropdown menus for the user to input their personalized answers to the questions on the calculator. I also worked on the frontend design artifacts and made sure to consider certain possibilities of the user having limitations that may not allow them to complete the questions in the traditional calculator.
 
-## Back-end
+## Back-End
 >
 This week, I worked hard on creating our own API. First, I created a Google Sheet which was worked on by the entire group. This contained the data regarding each of the Ivy League colleges for each of the factors that we are including in the user processed input. Then, this was exported into a CSV file and proper progress was made on the API's creation. 
+
+# Week 2 Summary
+
+## Scrum Master
+>
+
+## DevOps
+>
+
+## Front-End
+>
+
+## Back-End
