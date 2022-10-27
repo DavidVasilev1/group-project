@@ -1,9 +1,6 @@
 <!-- Dropdown: Genders  -->
 <html>
   <style>
-    .dropdownMain {
-      font-size: 18px !important;
-    }
     select {
       text-align: center !important;
       left: 50% !important;
@@ -15,18 +12,19 @@
       document.getElementById("gender").innerHTML = genderList.options[genderList.selectedIndex].text;
     }
   </script>
-  <body id="dropdownMain">
+  <body>
 <!-- Choices  -->
     <form>
       <!-- Dropdown: Gender -->
-      <p id="dropdown">Please Select Your Gender:</p>
-        <select id="genderList" onchange="gen()">
+      <p style="font-size:20px;">Please Select Your Gender: <font color = "#ffffc2"><t id = "gender"></t></font></p>
+      <div style="text-align: center;">
+        <select id="genderList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="gen()">
             <option> ---Choose Gender--- </option>  
             <option> Male </option>  
             <option> Female </option>
-            <option> Other </option>  
+            <option> Other </option>
         </select>
-      <p>Your selected gender is: <font color = "#ffffc2"><t id = "gender"></t></font></p>
+      </div>
     </form>
   </body>
 </html>
@@ -41,8 +39,9 @@
   <body>
 <!-- Choices  -->
     <form>
-      Please Select Your Ethnicity:
-        <select id="ethnicityList" onchange="eth()">
+      <p style="font-size:20px;">Please Select Your Ethnicity: <font color = "#ffffc2"><t id = "ethnicity"></t></font></p>
+      <div style="text-align: center;">  
+        <select id="ethnicityList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="eth()">
             <option> ---Choose Ethnicity--- </option>  
             <option> White </option>  
             <option> Hispanic </option>  
@@ -50,8 +49,8 @@
             <option> Asian </option>  
             <option> Other </option>  
         </select>
+      </div>
         <!-- Creates a different color font to differentiate user input and output  -->
-      <p>Your selected ethnicity is: <font color = "#ffffc2"><t id = "ethnicity"></t></font></p>
     </form>
   </body>
 </html>
@@ -67,8 +66,9 @@
 <!-- Choices  -->
 <!-- This needs to be fixed so that the "other" can be actually explained for the user -->
     <form>
-      Please Select Your Major:
-        <select id="majorList" onchange="maj()">
+      <p style="font-size:20px;">Please Select Your Major: <font color = "#ffffc2"><t id = "major"></t></font></p>
+      <div style="text-align: center;">  
+        <select id="majorList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="maj()">
             <option> ---Choose Major--- </option>  
             <option> Computer Science </option>  
             <option> Business </option>  
@@ -79,7 +79,7 @@
             <option> English </option>
             <option> Other </option>
         </select>
-      <p>Your selected major is: <font color = "#ffffc2"><t id = "major"></t></font></p>
+      </div>
     </form>
   </body>
 </html>
@@ -126,9 +126,10 @@
     </head>
     <!-- GPA Slider below-->
   <body>
+    <p>Please Select Your GPA: <span id="demo"></span></p>
     <div class="slidecontainer">
       <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange">
-      <p>Your GPA is: <span id="demo"></span></p>
+      
     </div>
     <script>
       var slider = document.getElementById("myRange");
