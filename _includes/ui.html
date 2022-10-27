@@ -18,11 +18,13 @@
   <body id="dropdownMain">
 <!-- Choices  -->
     <form>
+      <!-- Dropdown: Gender -->
       <p id="dropdown">Please Select Your Gender:</p>
         <select id="genderList" onchange="gen()">
             <option> ---Choose Gender--- </option>  
             <option> Male </option>  
-            <option> Female </option>  
+            <option> Female </option>
+            <option> Other </option>  
         </select>
       <p>Your selected gender is: <font color = "#ffffc2"><t id = "gender"></t></font></p>
     </form>
@@ -48,6 +50,7 @@
             <option> Asian </option>  
             <option> Other </option>  
         </select>
+        <!-- Creates a different color font to differentiate user input and output  -->
       <p>Your selected ethnicity is: <font color = "#ffffc2"><t id = "ethnicity"></t></font></p>
     </form>
   </body>
@@ -62,6 +65,7 @@
   </script>
   <body>
 <!-- Choices  -->
+<!-- This needs to be fixed so that the "other" can be actually explained for the user -->
     <form>
       Please Select Your Major:
         <select id="majorList" onchange="maj()">
@@ -120,6 +124,7 @@
         }
       </style>
     </head>
+    <!-- GPA Slider below-->
   <body>
     <div class="slidecontainer">
       <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange">
@@ -151,7 +156,7 @@
     <title>Document</title>
   </head>
   <body>
-    <label> Enter the amount of extracurriculars you are a part of</label><br>
+    <label> How many extracurriculars have you participated in throughout high school?</label><br>
       <input type = "text" id = "ec"><br>
         <button type="button" id="ecbutton">submit</button>
       <script src="script.js">
@@ -163,7 +168,7 @@
           document.getElementById("ecResult").innerHTML = ec;
         }
   </script>
-  <p>This is how many extracurriculars you are part of: <font color = 
+  <p>This is how many extracurriculars you have been a part of: <font color = 
   "#ffffc2"><t id = "ecResult"></t></font></p>
   </body>
 </html>
@@ -175,7 +180,7 @@
     <title>Document</title>
   </head>
   <body>
-    <label> Enter the amount of awards you have won</label><br>
+    <label> Enter the amount of awards you have won throughout high school. </label><br>
     <input type = "text" id = "awards"><br>
       <button type="button" id="awardbutton">submit</button>
     <script src="script.js">
