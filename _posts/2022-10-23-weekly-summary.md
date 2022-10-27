@@ -2,10 +2,10 @@
 toc: true
 comments: true
 layout: post
-title:  Week 1 Summary
-description: Summary of what we have done this week.
-permalink: /week1
-categories: [Week 1]
+title:  Weekly Progress Summaries
+description: Summary of what we have done every week.
+permalink: /weekly
+categories: [Weekly Summary]
 ---
 
 # Week 1 Summary
