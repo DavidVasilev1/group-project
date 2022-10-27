@@ -15,10 +15,16 @@
   <body>
 <!-- Choices  -->
     <form>
+<<<<<<< HEAD
       <!-- Dropdown: Gender -->
       <p style="font-size:20px;">Please Select Your Gender: <font color = "#ffffc2"><t id = "gender"></t></font></p>
       <div style="text-align: center;">
         <select id="genderList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="gen()">
+=======
+      <!-- Dropdown: Gender; could maybe incorporate a transgender option -->
+      <p id="dropdown">Please Select Your Gender:</p>
+        <select id="genderList" onchange="gen()">
+>>>>>>> e8b8ec463dbdcd07475f6f09d2986beae381e05d
             <option> ---Choose Gender--- </option>  
             <option> Male </option>  
             <option> Female </option>
@@ -129,7 +135,11 @@
     <p>Please Select Your GPA: <span id="demo"></span></p>
     <div class="slidecontainer">
       <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange">
+<<<<<<< HEAD
       
+=======
+      <p>Your unweighted GPA is: <span id="demo"></span></p>
+>>>>>>> e8b8ec463dbdcd07475f6f09d2986beae381e05d
     </div>
     <script>
       var slider = document.getElementById("myRange");
@@ -169,7 +179,7 @@
           document.getElementById("ecResult").innerHTML = ec;
         }
   </script>
-  <p>This is how many extracurriculars you have been a part of: <font color = 
+  <p>This is how many extracurriculars you are a part of: <font color = 
   "#ffffc2"><t id = "ecResult"></t></font></p>
   </body>
 </html>
@@ -288,5 +298,5 @@
   <p>Your essay grade is: <font color = "#ffffc2"><t id = "essayResult"></t></font></p>
   </body>
 </html>
-
+<!-- Still need to incorporate API for this calculation button to work  -->
 <button>Calculate</button>
