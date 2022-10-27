@@ -25,3 +25,5 @@ This week, I worked on the frontend side of the calculator page that we are atte
 ## Back-end
 >
 This week, I worked hard on creating our own API. First, I created a Google Sheet which was worked on by the entire group. This contained the data regarding each of the Ivy League colleges for each of the factors that we are including in the user processed input. Then, this was exported into a CSV file and proper progress was made on the API's creation. 
+
+# Week 2 Summary
