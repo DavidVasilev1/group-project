@@ -286,7 +286,17 @@
   </head>
   <body>
     <label> Enter your essay grade </label><br>
-    
+    <input type = "text" id = "essay"><br>
+      <button type="button" id="essaybutton">submit</button>
+    <script src="script.js">
+    </script>
+    <script>
+      document.getElementById("essaybutton").onclick = function() {
+          var essay = document.getElementById("essay").value;
+          console.log("Your essay grade is: ",essay);
+          document.getElementById("essayResult").innerHTML = essay;
+      }
+  </script>
   <p>Your essay grade is: <font color = "#ffffc2"><t id = "essayResult"></t></font></p>
   </body>
 </html>
