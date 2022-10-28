@@ -8,7 +8,7 @@ permalink: /essay
 categories: [Self Grading your Essay]
 ---
 
-<h1 style="text-align:center"> How To Grade Your College Application Essays for the Calculator: </h1>
+<h1 style="text-align:center"> Grading Your College Application Essays:</h1>
 <style>
   hr.line1 {
     border: 2px solid white;
