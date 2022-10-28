@@ -18,7 +18,7 @@ This week, I completed the plan for what we will be doing in [Workflow](https://
 >
 This week, I completed the entire layout of how the project is going to work for our group. This included the authoring tool methods, the planned integration of programming languages in our project, our github sociology (how the branches are going to work), and our methods for deployment and testing. These components are going to be extremely important in the future when we are working on key components of our project. 
 
-## Front-end
+## Front-End
 >
 This week, I worked on the frontend side of the calculator page that we are attempting to create. I utilized an integration of HTML and JavaScript on our FastPages site to create dropdown menus for the user to input their personalized answers to the questions on the calculator. I also worked on the frontend design artifacts and made sure to consider certain possibilities of the user having limitations that may not allow them to complete the questions in the traditional calculator.
 
@@ -38,3 +38,4 @@ This week, I worked hard on creating our own API. First, I created a Google Shee
 >
 
 ## Back-End
+>
