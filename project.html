@@ -509,17 +509,20 @@ window.onload = wrap_img;
   </script>
 </div>
 <!-- Still need to incorporate API for this calculation button to actually work  -->
-<html>
-  <div style="text-align: center;">
-    <button style="font-size:24px; border-radius: 10px; border-color: rgb(255, 255, 255); position: relative;" id="outputButton">Calculate</button><br />
-    <p style="font-size:20px; padding-top: 30px; text-align: center;"><font color="#ffffc2"><t id="output"></t></font></p>
+<div style="text-align: center;">
+    <button style="font-size:24px; border-radius: 10px; border-color: rgb(255, 255, 255); position: relative;" id="outputButton" onclick="output()">Calculate</button><br />
+    <p style="font-size:20px; padding-top: 30px; text-align: center;">
+      <font color="#ffffc2">
+        <t id="output"></t>
+      </font></p>
   </div>
-  <script>
-    document.getElementById("outputButton").onclick = function() {
-        document.getElementById("output").innerHTML = "This button does nothing!";
+<script>
+    var outputEssay = document.getElementById("genderList");
+    function output() {
+        document.getElementById("output").innerHTML = outputEssay;
     }
   </script>
-</html>
+
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
