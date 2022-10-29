@@ -434,7 +434,8 @@ window.onload = wrap_img;
 </div>
 <!-- Slider: ACT -->
 <div>
-  <p style="font-size:20px;"> Select your ACT essayScore<t class="popup" onclick="ACTInfo()"><img src="images/star.png" style="height: 10px; width: 10px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+  <p style="font-size:20px;"> Select your ACT score 
+    <t class="popup" onclick="ACTInfo()"><img src="images/star.png" style="height: 10px; width: 10px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
     <span class="popuptext" id="ACTPopup" style="font-size: 14px;">Only enter this if it is applicable towards you. Select the checkbox to exclude this from your results.</span>
   </t>: <font color="#ffffc2">
     <span id="ACTResult"></span>
@@ -452,14 +453,20 @@ window.onload = wrap_img;
       outputACT.innerHTML = this.value;
     }
     function ACTInfo() {
-      var popup = document.getElementById("ACTPopup");
+      var popup = document.getElementById("SATPopup");
       popup.classList.toggle("show");
     }
   </script>
 </div>
 <!-- Slider: Essay -->
 <div>
-  <p style="font-size:20px;"> Enter your essay grade: <font color="#ffffc2"><t id="essayResult"></t></font></p>
+  <p style="font-size:20px;"> Enter your essay grade
+    <t class="popup" onclick="essayInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+      <span class="popuptext" id="essayPopup" style="font-size: 14px;">We have made a rubric on how to grade your essay <a href="https://davidvasilev1.github.io/group-project/essay?">here</a>.</span>
+    </t>: <font color="#ffffc2">
+      <t id="essayResult"></t>
+    </font>
+  </p>
     <div class="slidecontainer">
       <input type="range" min="0" max="10" step="1" value="0" class="sliders" id="essayScore" />
     </div>
@@ -470,6 +477,10 @@ window.onload = wrap_img;
     outputEssay.innerHTML = sliderEssay.value;
     sliderEssay.oninput = function() {
       outputEssay.innerHTML = this.value;
+    }
+    function essayInfo() {
+      var popup = document.getElementById("essayPopup");
+      popup.classList.toggle("show");
     }
   </script>
 </div>
