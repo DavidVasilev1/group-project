@@ -105,28 +105,126 @@ window.onload = wrap_img;
 
 <hr class="line1" />
 
+<style>
+  select {
+    text-align: center !important;
+    left: 50% !important;
+  }
+  div {
+    padding-bottom: 10px;
+  }
+  .slidecontainer {
+    width: 100%;
+  }
+  .sliders {
+    -webkit-appearance: rgb(179, 179, 179);
+    width: 100%;
+    height: 10px;
+    border-radius: 5px;
+    background: #d3d3d3 !important;
+    outline: none;
+    opacity: 1;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  .sliders::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: #ffffff;
+    outline: #ffffff;
+    cursor: pointer;
+  }
+  .sliders::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+  }
+  /* colors */
+  input[type='range'] {
+    overflow: hidden;
+    -webkit-appearance: none;
+    background-color: #000000;
+  }
+  input[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    color: #13bba4;
+    margin-top: -1px;
+  }
+  
+  input[type='range']::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 10px;
+    cursor: ew-resize;
+    background: #0014cc;
+    border: rgb(83, 83, 83);
+    border-radius: 2px;
+    box-shadow: -1000px 0 0 1000px #8987c8;
+  }
+  /* popup */
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  /* The actual popup */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 170px;
+    background-color: rgb(41, 41, 41);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 8px 0;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  /* Toggle this class - hide and show the popup */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
+  }
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+</style>
+
 <!-- Dropdown: Genders  -->
-<html>
-  <style>
-    select {
-      text-align: center !important;
-      left: 50% !important;
-    }
-    div {
-      padding-bottom: 10px;
-    }
-  </style>
+<div>
+<!-- Javascript -->
   <script>
-  function gen() {
-      var genderList = document.getElementById("genderList");
-      document.getElementById("gender").innerHTML = genderList.options[genderList.selectedIndex].text;
+    function gen() {
+        var genderList = document.getElementById("genderList");
+        document.getElementById("gender").innerHTML = genderList.options[genderList.selectedIndex].text;
     }
   </script>
-  <body>
 <!-- Choices  -->
+  <div>
     <form>
-      <!-- Dropdown: Gender -->
-      <p style="font-size:20px;">Select Your Gender: <font color="#ffffc2"><t id="gender"></t></font></p>
+      <p style="font-size:20px;">Select Your Gender: 
+        <font color="#ffffc2">
+          <t id="gender"></t>
+        </font>
+      </p>
       <div style="text-align: center;">
         <select id="genderList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="gen()">
             <option hidden=""> ---Choose Gender--- </option>  
@@ -136,18 +234,19 @@ window.onload = wrap_img;
         </select>
       </div>
     </form>
-  </body>
-</html>
+  </div>
+</div>
 <!-- Dropdown: Ethnicity  -->
-<html>
+<div>
+<!-- Javascript -->
   <script>
     function eth() {
       var ethnicityList=document.getElementById("ethnicityList");
       document.getElementById("ethnicity").innerHTML=ethnicityList.options[ethnicityList.selectedIndex].text;
     }
   </script>
-  <body>
 <!-- Choices  -->
+  <div>
     <form>
       <p style="font-size:20px;">Select Your Ethnicity: <font color="#ffffc2"><t id="ethnicity"></t></font></p>
       <div style="text-align: center;">  
@@ -160,23 +259,33 @@ window.onload = wrap_img;
             <option> Other </option>  
         </select>
       </div>
-        <!-- Creates a different color font to differentiate user input and output  -->
     </form>
-  </body>
-</html>
+  </div>
+</div>
 <!-- Dropdown: Majors  -->
-<html>
+<div>
+<!-- Javascript -->
   <script>
-  function maj() {
-      var majorList=document.getElementById("majorList");
-      document.getElementById("major").innerHTML=majorList.options[majorList.selectedIndex].text;
-    }
+    function maj() {
+        var majorList=document.getElementById("majorList");
+        document.getElementById("major").innerHTML=majorList.options[majorList.selectedIndex].text;
+      }
+      function majInfo() {
+        var popup = document.getElementById("majPopup");
+        popup.classList.toggle("show");
+      }
   </script>
-  <body>
+  <div>
 <!-- Choices  -->
 <!-- This needs to be fixed so that the "other" can be actually explained for the user -->
     <form>
-      <p style="font-size:20px;">Select Your Major: <font color="#ffffc2"><t id="major"></t></font></p>
+      <p style="font-size:20px;">Select Your Major
+        <t class="popup" onclick="majInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+          <span class="popuptext" id="majPopup" style="font-size: 14px;">The "Other" option is any major (ie. medicine, psychology, etc.) that is not listed.</span>
+        </t>: 
+        <font color="#ffffc2">
+          <t id="major"></t>
+        </font></p>
       <div style="text-align: center;">  
         <select id="majorList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="maj()">
             <option hidden=""> ---Choose Major--- </option>  
@@ -189,198 +298,185 @@ window.onload = wrap_img;
             <option> English </option>
             <option> Other </option>
         </select>
+        
       </div>
     </form>
-  </body>
-</html>
-<!-- Textboxes -->
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <style>
-        .slidecontainer {
-          width: 100%;
-        }
-        .sliders {
-          -webkit-appearance: rgb(179, 179, 179);
-          width: 100%;
-          height: 10px;
-          border-radius: 5px;
-          background: #d3d3d3 !important;
-          outline: none;
-          opacity: 1;
-          -webkit-transition: .2s;
-          transition: opacity .2s;
-        }
-        .sliders::-webkit-slider-thumb {
-          -webkit-appearance: none;
-          appearance: none;
-          width: 15px;
-          height: 15px;
-          border-radius: 100%;
-          background: #ffffff;
-          outline: #ffffff;
-          cursor: pointer;
-        }
-        .sliders::-moz-range-thumb {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background: #ffffff;
-          cursor: pointer;
-        }
-        /* colors */
-        input[type='range'] {
-          overflow: hidden;
-          -webkit-appearance: none;
-          background-color: #000000;
-        }
-        input[type='range']::-webkit-slider-runnable-track {
-          height: 10px;
-          -webkit-appearance: none;
-          color: #13bba4;
-          margin-top: -1px;
-        }
-        
-        input[type='range']::-webkit-slider-thumb {
-          width: 10px;
-          -webkit-appearance: none;
-          height: 10px;
-          cursor: ew-resize;
-          background: #0014cc;
-          border: rgb(83, 83, 83);
-          border-radius: 2px;
-          box-shadow: -1000px 0 0 1000px #8987c8;
-        }
-      </style>
-    </head>
-    <!-- GPA Slider below-->
-  <body>
-    <p style="font-size:20px;">Select Your Unweighted GPA: <font color="#ffffc2"><span id="GPA"></span></font></p>
-    <div class="slidecontainer">
-      <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange" />
-    </div>
-    <script>
-      var sliderGPA = document.getElementById("myRange");
-      var outputGPA = document.getElementById("GPA");
-      outputGPA.innerHTML = sliderGPA.value;
-      sliderGPA.oninput = function() {
-        outputGPA.innerHTML = this.value;
-      }
-    </script>
-  </body>
-</html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-</html>
-
-<html lang="en">
-  <body>
-    <p style="font-size:20px;"> Number of extracurriculars you participated in: <font color="#ffffc2"><t id="ecResult"></t></font></p>
-    <div style="text-align: center;">
-      <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type="number" id="ec" />
-        <button type="button" style="font-size:12px; border-radius: 10px; border-color: rgb(255, 255, 255);" id="ecbutton">Submit</button>
-    </div>
-      <script>
-            document.getElementById("ecbutton").onclick = function() {
-            var ec = document.getElementById("ec").value;
-            console.log("This is how many extracurriculars you are part of: ",ec);
-            document.getElementById("ecResult").innerHTML = ec;
-            } 
-      </script>
-  </body>
-</html>
-<html lang="en">
-  <body>
-    <p style="font-size:20px;"> Amount of awards you have won: <font color="#ffffc2"><t id="awardResult"></t></font></p>
-    <div style="text-align: center;">
-      <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type="number" id="awards" />
-        <button type="button" style="font-size:12px; border-radius: 10px; border-color: rgb(255, 255, 255);" id="awardbutton">Submit</button>
-    </div>
-    <script>
-      document.getElementById("awardbutton").onclick = function() {
-          var award = document.getElementById("awards").value;
-          console.log("This is how many awards you have won: ",award);
-          document.getElementById("awardResult").innerHTML = award;
-      }
-    </script>
-  </body>
-</html>
-<html lang="en">
-  <body>
-    <p style="font-size:20px;"> Amount of leadership positions you have: <font color="#ffffc2"><t id="leadResult"></t></font></p>
-    <div style="text-align: center;">
-      <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type="number" id="lead" />
-        <button type="button" style="font-size:12px; border-radius: 10px; border-color: rgb(255, 255, 255);" id="leadbutton">Submit</button>
-    </div>
-    <script>
-      document.getElementById("leadbutton").onclick = function() {
-          var lead = document.getElementById("lead").value;
-          console.log("This is how many leadership positions you have: ",lead);
-          document.getElementById("leadResult").innerHTML = lead;
-      }
-    </script>
-  </body>
-</html>
-<html lang="en">
-  <body>
-    <p style="font-size:20px;"> Select your SAT score (if applicable): <font color="#ffffc2"><span id="SATResults"></span></font></p>
-      <div class="SATslidecontainer">
-        <input type="range" min="400" max="1600" step="10" value="0" class="sliders" id="SATScore" />
-      </div>
-    <script>
-      var sliderSAT = document.getElementById("SATScore");
-      var outputSAT = document.getElementById("SATResults");
-      outputSAT.innerHTML = sliderSAT.value;
-      sliderSAT.oninput = function() {
-        outputSAT.innerHTML = this.value;
-      }
+  </div>
+</div>
+<!-- Slider: GPA -->
+<div>
+  <p style="font-size:20px;">Select Your GPA
+    <t class="popup" onclick="GPAInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+      <span class="popuptext" id="GPAPopup" style="font-size: 14px;">This is unweighted (0-4 scale) GPA.</span>
+    </t>: 
+    <font color="#ffffc2">
+      <span id="GPA"></span>
+    </font>
+  </p>
+  <div class="slidecontainer">
+    <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange" />
+  </div>
+<!-- Javascript -->
+  <script>
+    var sliderGPA = document.getElementById("myRange");
+    var outputGPA = document.getElementById("GPA");
+    outputGPA.innerHTML = sliderGPA.value;
+    sliderGPA.oninput = function() {
+      outputGPA.innerHTML = this.value;
+    }
+    function GPAInfo() {
+      var popup = document.getElementById("GPAPopup");
+      popup.classList.toggle("show");
+    }
   </script>
-  </body>
-</html>
-<html lang="en">
-  <body>
-    <p style="font-size:20px;"> Select your ACT score (if applicable): <font color="#ffffc2"><span id="ACTResult"></span></font></p>
-      <div class="slidecontainer">
-        <input type="range" min="1" max="36" step="1" value="0" class="sliders" id="ACTScore" />
-      </div>
-    <script>
-      var sliderACT = document.getElementById("ACTScore");
-      var outputACT = document.getElementById("ACTResult");
-      outputACT.innerHTML = sliderACT.value;
-      sliderACT.oninput = function() {
-        outputACT.innerHTML = this.value;
-      }
-    </script>
-  </body>
-</html>
-<html lang="en">
-  <body>
-    <p style="font-size:20px;"> Enter your essay grade: <font color="#ffffc2"><t id="essayResult"></t></font></p>
-      <div class="slidecontainer">
-        <input type="range" min="0" max="10" step="1" value="0" class="sliders" id="essayScore" />
-      </div>
-    <script src="script.js">
-    </script>
-    <script>
-      var sliderEssay = document.getElementById("essayScore");
-      var outputEssay = document.getElementById("essayResult");
-      outputEssay.innerHTML = sliderEssay.value;
-      sliderEssay.oninput = function() {
-        outputEssay.innerHTML = this.value;
-      }
-    </script>
-  </body>
-</html>
+</div>
+<!-- Textbox: Extracirriculars -->
+<div>
+  <p style="font-size:20px;"> Number of extracurriculars
+    <t class="popup" onclick="ecInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+      <span class="popuptext" id="ecPopup" style="font-size: 14px;">This is the number of extracurriculars (ie. clubs, sports, etc.) you have participated in throughout highschool.</span>
+    </t>: 
+    <font color="#ffffc2">
+      <t id="ecResult"></t>
+    </font>
+  </p>
+  <div style="text-align: center;">
+    <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type="number" id="ec" onkeyup="ecValue()" />
+  </div>
+<!-- Javascript -->
+  <script>
+    function ecValue() {
+    var ec = document.getElementById("ec").value;
+    document.getElementById("ecResult").innerHTML = ec;
+    } 
+    function ecInfo() {
+      var popup = document.getElementById("ecPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
+</div>
+<!-- Textbox: Awards -->
+<div>
+  <p style="font-size:20px;"> Number of awards
+    <t class="popup" onclick="awardInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+      <span class="popuptext" id="awardPopup" style="font-size: 14px;">This is the number of awards (ie. scholarships, competitions, etc.) you have won throughout highschool.</span>
+    </t>: 
+    <font color="#ffffc2">
+      <t id="awardResult"></t>
+    </font>
+  </p>
+  <div style="text-align: center;">
+    <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type="number" id="awards" onkeyup="awardValue()" />
+  </div>
+<!-- Javascript -->
+  <script>
+    function awardValue() {
+        var award = document.getElementById("awards").value;
+        document.getElementById("awardResult").innerHTML = award;
+    }
+    function awardInfo() {
+      var popup = document.getElementById("awardPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
+</div>
+<!-- Textbox: Leadership -->
+<div>
+  <p style="font-size:20px;"> Number of leadership
+    <t class="popup" onclick="leadInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+      <span class="popuptext" id="leadPopup" style="font-size: 14px;">This is the number of leadership positions (ie. club president, etc.) you have had throughout highschool.</span>
+    </t>: 
+    <font color="#ffffc2">
+      <t id="leadResult"></t>
+    </font>
+  </p>
+  <div style="text-align: center;">
+    <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type="number" id="lead" onkeyup="leadValue()" />
+  </div>
+<!-- Javascript -->
+  <script>
+    function leadValue() {
+        var lead = document.getElementById("lead").value;
+        document.getElementById("leadResult").innerHTML = lead;
+    }
+    function leadInfo() {
+      var popup = document.getElementById("leadPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
+</div>
+<!-- Slider: SAT -->
+<div>
+  <p style="font-size:20px;"> Select your SAT score
+    <t class="popup" onclick="SATInfo()"><img src="images/star.png" style="height: 10px; width: 10px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+      <span class="popuptext" id="SATPopup" style="font-size: 14px;">Only enter this if it is applicable towards you. Select the checkbox to exclude this from your results.</span>
+    </t>: 
+    <font color="#ffffc2">
+      <span id="SATResults"></span>
+    </font>
+  </p>
+    <div class="SATslidecontainer">
+      <input type="range" min="400" max="1600" step="10" value="0" class="sliders" id="SATScore" />
+    </div>
+<!-- Javascript -->
+  <script>
+    var sliderSAT = document.getElementById("SATScore");
+    var outputSAT = document.getElementById("SATResults");
+    outputSAT.innerHTML = sliderSAT.value;
+    sliderSAT.oninput = function() {
+      outputSAT.innerHTML = this.value;
+    }
+    function SATInfo() {
+      var popup = document.getElementById("SATPopup");
+      popup.classList.toggle("show");
+    }
+</script>
+</div>
+<!-- Slider: ACT -->
+<div>
+  <p style="font-size:20px;"> Select your ACT essayScore<t class="popup" onclick="ACTInfo()"><img src="images/star.png" style="height: 10px; width: 10px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;" />
+    <span class="popuptext" id="ACTPopup" style="font-size: 14px;">Only enter this if it is applicable towards you. Select the checkbox to exclude this from your results.</span>
+  </t>: <font color="#ffffc2">
+    <span id="ACTResult"></span>
+  </font>
+</p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="36" step="1" value="0" class="sliders" id="ACTScore" />
+    </div>
+<!-- Javascript -->
+  <script>
+    var sliderACT = document.getElementById("ACTScore");
+    var outputACT = document.getElementById("ACTResult");
+    outputACT.innerHTML = sliderACT.value;
+    sliderACT.oninput = function() {
+      outputACT.innerHTML = this.value;
+    }
+    function ACTInfo() {
+      var popup = document.getElementById("ACTPopup");
+      popup.classList.toggle("show");
+    }
+  </script>
+</div>
+<!-- Slider: Essay -->
+<div>
+  <p style="font-size:20px;"> Enter your essay grade: <font color="#ffffc2"><t id="essayResult"></t></font></p>
+    <div class="slidecontainer">
+      <input type="range" min="0" max="10" step="1" value="0" class="sliders" id="essayScore" />
+    </div>
+<!-- Javascript -->
+  <script>
+    var sliderEssay = document.getElementById("essayScore");
+    var outputEssay = document.getElementById("essayResult");
+    outputEssay.innerHTML = sliderEssay.value;
+    sliderEssay.oninput = function() {
+      outputEssay.innerHTML = this.value;
+    }
+  </script>
+</div>
 <!-- Still need to incorporate API for this calculation button to actually work  -->
 <html>
   <div style="text-align: center;">
-    <button style="font-size:24px; border-radius: 10px; border-color: rgb(255, 255, 255); position: absolute;" id="outputButton">Calculate</button><br />
+    <button style="font-size:24px; border-radius: 10px; border-color: rgb(255, 255, 255); position: relative;" id="outputButton">Calculate</button><br />
     <p style="font-size:20px; padding-top: 30px; text-align: center;"><font color="#ffffc2"><t id="output"></t></font></p>
   </div>
   <script>
@@ -389,7 +485,6 @@ window.onload = wrap_img;
     }
   </script>
 </html>
-
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
