@@ -19,10 +19,10 @@
 <!-- Choices  -->
     <form>
       <!-- Dropdown: Gender -->
-      <p style="font-size:20px;">Please Select Your Gender: <font color = "#ffffc2"><t id = "gender"></t></font></p>
+      <p style="font-size:20px;">Select Your Gender: <font color = "#ffffc2"><t id = "gender"></t></font></p>
       <div style="text-align: center;">
         <select id="genderList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="gen()">
-            <option> ---Choose Gender--- </option>  
+            <option hidden> ---Choose Gender--- </option>  
             <option> Male </option>  
             <option> Female </option>
             <option> Other </option>
@@ -42,10 +42,10 @@
   <body>
 <!-- Choices  -->
     <form>
-      <p style="font-size:20px;">Please Select Your Ethnicity: <font color = "#ffffc2"><t id = "ethnicity"></t></font></p>
+      <p style="font-size:20px;">Select Your Ethnicity: <font color = "#ffffc2"><t id = "ethnicity"></t></font></p>
       <div style="text-align: center;">  
         <select id="ethnicityList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="eth()">
-            <option> ---Choose Ethnicity--- </option>  
+            <option hidden> ---Choose Ethnicity--- </option>  
             <option> White </option>  
             <option> Hispanic </option>  
             <option> African-American </option>  
@@ -69,10 +69,10 @@
 <!-- Choices  -->
 <!-- This needs to be fixed so that the "other" can be actually explained for the user -->
     <form>
-      <p style="font-size:20px;">Please Select Your Major: <font color = "#ffffc2"><t id = "major"></t></font></p>
+      <p style="font-size:20px;">Select Your Major: <font color = "#ffffc2"><t id = "major"></t></font></p>
       <div style="text-align: center;">  
         <select id="majorList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="maj()">
-            <option> ---Choose Major--- </option>  
+            <option hidden> ---Choose Major--- </option>  
             <option> Computer Science </option>  
             <option> Business </option>  
             <option> Biology </option>  
@@ -95,25 +95,22 @@
           width: 100%;
         }
         .sliders {
-          -webkit-appearance: gray;
+          -webkit-appearance: rgb(179, 179, 179);
           width: 100%;
           height: 10px;
           border-radius: 5px;
-          background: #878787 !important;
+          background: #d3d3d3 !important;
           outline: none;
-          opacity: 0.8;
+          opacity: 1;
           -webkit-transition: .2s;
           transition: opacity .2s;
-        }
-        .sliders:hover {
-          opacity: 1;
         }
         .sliders::-webkit-slider-thumb {
           -webkit-appearance: none;
           appearance: none;
           width: 15px;
           height: 15px;
-          border-radius: 50%;
+          border-radius: 100%;
           background: #ffffff;
           outline: #ffffff;
           cursor: pointer;
@@ -129,26 +126,39 @@
         input[type='range'] {
           overflow: hidden;
           -webkit-appearance: none;
-          background-color: #ffffff;
+          background-color: #000000;
         }
         input[type='range']::-webkit-slider-runnable-track {
           height: 10px;
-          color: #e2e2e2;
+          -webkit-appearance: none;
+          color: #13bba4;
+          margin-top: -1px;
+        }
+        
+        input[type='range']::-webkit-slider-thumb {
+          width: 10px;
+          -webkit-appearance: none;
+          height: 10px;
+          cursor: ew-resize;
+          background: #0014cc;
+          border: rgb(83, 83, 83);
+          border-radius: 2px;
+          box-shadow: -1000px 0 0 1000px #8987c8;
         }
       </style>
     </head>
     <!-- GPA Slider below-->
   <body>
-    <p style="font-size:20px;">Please Select Your Unweighted GPA: <font color = "#ffffc2"><span id="GPA"></span></font></p>
+    <p style="font-size:20px;">Select Your Unweighted GPA: <font color = "#ffffc2"><span id="GPA"></span></font></p>
     <div class="slidecontainer">
       <input type="range" min="0" max="4" step="0.01" value="0" class="sliders" id="myRange">
     </div>
     <script>
-      var slider = document.getElementById("myRange");
-      var output = document.getElementById("GPA");
-      output.innerHTML = slider.value;
-      slider.oninput = function() {
-        output.innerHTML = this.value;
+      var sliderGPA = document.getElementById("myRange");
+      var outputGPA = document.getElementById("GPA");
+      outputGPA.innerHTML = sliderGPA.value;
+      sliderGPA.oninput = function() {
+        outputGPA.innerHTML = this.value;
       }
     </script>
   </body>
@@ -161,66 +171,46 @@
     <title>Document</title>
   </head>
 </html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
   <body>
-    <label> How many extracurriculars have you participated in throughout high school?</label><br>
-      <input type = "text" id = "ec"><br>
-        <button type="button" id="ecbutton">submit</button>
-      <script src="script.js">
-      </script>
+    <p style="font-size:20px;"> Number of extracurriculars you participated in: <font color = "#ffffc2"><t id = "ecResult"></t></font></p>
+    <div style="text-align: center;">
+      <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type = "number" id = "ec">
+        <button type="button" style="font-size:12px; border-radius: 10px; border-color: rgb(255, 255, 255);" id="ecbutton">Submit</button>
+    </div>
       <script>
-        document.getElementById("ecbutton").onclick = function() {
-          var ec = document.getElementById("ec").value;
-          console.log("This is how many extracurriculars you are part of: ",ec);
-          document.getElementById("ecResult").innerHTML = ec;
-        }
-  </script>
-  <p>This is how many extracurriculars you are a part of: <font color = 
-  "#ffffc2"><t id = "ecResult"></t></font></p>
+            document.getElementById("ecbutton").onclick = function() {
+            var ec = document.getElementById("ec").value;
+            console.log("This is how many extracurriculars you are part of: ",ec);
+            document.getElementById("ecResult").innerHTML = ec;
+            } 
+      </script>
   </body>
 </html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
   <body>
-    <label> Enter the amount of awards you have won throughout high school. </label><br>
-    <input type = "text" id = "awards"><br>
-      <button type="button" id="awardbutton">submit</button>
-    <script src="script.js">
-    </script>
+    <p style="font-size:20px;"> Amount of awards you have won: <font color = "#ffffc2"><t id = "awardResult"></t></font></p>
+    <div style="text-align: center;">
+      <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type = "number" id = "awards">
+        <button type="button" style="font-size:12px; border-radius: 10px; border-color: rgb(255, 255, 255);" id="awardbutton">Submit</button>
+    </div>
     <script>
       document.getElementById("awardbutton").onclick = function() {
           var award = document.getElementById("awards").value;
           console.log("This is how many awards you have won: ",award);
           document.getElementById("awardResult").innerHTML = award;
       }
-  </script>
-  <p>This is how many awards you have won: <font color = "#ffffc2"><t id = "awardResult"></t></font></p>
+    </script>
   </body>
 </html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
   <body>
-    <label> Enter the amount of leadership positions you have</label><br>
-    <input type = "text" id = "lead"><br>
-      <button type="button" id="leadbutton">submit</button>
-    <script src="script.js">
-    </script>
+    <p style="font-size:20px;"> Amount of leadership positions you have: <font color = "#ffffc2"><t id = "leadResult"></t></font></p>
+    <div style="text-align: center;">
+      <input style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" type = "number" id = "lead">
+        <button type="button" style="font-size:12px; border-radius: 10px; border-color: rgb(255, 255, 255);" id="leadbutton">Submit</button>
+    </div>
     <script>
       document.getElementById("leadbutton").onclick = function() {
           var lead = document.getElementById("lead").value;
@@ -228,77 +218,70 @@
           document.getElementById("leadResult").innerHTML = lead;
       }
     </script>
-    <p>This is how many leadership positions you have: <font color = "#ffffc2"><t id = "leadResult"></t></font></p>
   </body>
 </html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
   <body>
-    <label> Enter your SAT score (if applicable)</label><br>
-    <input type = "text" id = "SAT"><br>
-      <button type="button" id="SATbutton">submit</button>
-    <script src="script.js">
-    </script>
+    <p style="font-size:20px;"> Select your SAT score (if applicable): <font color = 
+      "#ffffc2"><span id="SATResults"></span></font></p>
+      <div class="SATslidecontainer">
+        <input type="range" min="400" max="1600" step="10" value="0" class="sliders" id="SATScore">
+      </div>
     <script>
-      document.getElementById("SATbutton").onclick = function() {
-          var SAT = document.getElementById("SAT").value;
-          console.log("Your SAT score is: ",SAT);
-          document.getElementById("SATResult").innerHTML = SAT;
+      var sliderSAT = document.getElementById("SATScore");
+      var outputSAT = document.getElementById("SATResults");
+      outputSAT.innerHTML = sliderSAT.value;
+      sliderSAT.oninput = function() {
+        outputSAT.innerHTML = this.value;
       }
   </script>
-  <p>Your SAT score is: <font color = "#ffffc2"><t id = "SATResult"></t></font></p>
   </body>
 </html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
   <body>
-    <label> Enter your ACT score (if applicable)</label><br>
-    <input type = "text" id = "ACT"><br>
-      <button type="button" id="ACTbutton">submit</button>
-    <script src="script.js">
-    </script>
+    <p style="font-size:20px;"> Select your ACT score (if applicable): <font color = 
+      "#ffffc2"><span id="ACTResult"></span></font></p>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="36" step="1" value="0" class="sliders" id="ACTScore">
+      </div>
     <script>
-      document.getElementById("ACTbutton").onclick = function() {
-          var ACT = document.getElementById("ACT").value;
-          console.log("Your ACT score is: ",ACT);
-          document.getElementById("ACTResult").innerHTML = ACT;
+      var sliderACT = document.getElementById("ACTScore");
+      var outputACT = document.getElementById("ACTResult");
+      outputACT.innerHTML = sliderACT.value;
+      sliderACT.oninput = function() {
+        outputACT.innerHTML = this.value;
       }
-  </script>
-  <p>Your ACT score is: <font color = "#ffffc2"><t id = "ACTResult"></t></font></p>
+    </script>
   </body>
 </html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
   <body>
-    <label> Enter your essay grade </label><br>
-    <input type = "text" id = "essay"><br>
-      <button type="button" id="essaybutton">submit</button>
+    <p style="font-size:20px;"> Enter your essay grade: <font color = "#ffffc2"><t id = "essayResult"></t></font></p>
+      <div class="slidecontainer">
+        <input type="range" min="0" max="10" step="1" value="0" class="sliders" id="essayScore">
+      </div>
     <script src="script.js">
     </script>
     <script>
-      document.getElementById("essaybutton").onclick = function() {
-          var essay = document.getElementById("essay").value;
-          console.log("Your essay grade is: ",essay);
-          document.getElementById("essayResult").innerHTML = essay;
+      var sliderEssay = document.getElementById("essayScore");
+      var outputEssay = document.getElementById("essayResult");
+      outputEssay.innerHTML = sliderEssay.value;
+      sliderEssay.oninput = function() {
+        outputEssay.innerHTML = this.value;
       }
-  </script>
-  <p>Your essay grade is: <font color = "#ffffc2"><t id = "essayResult"></t></font></p>
+    </script>
   </body>
 </html>
-<!-- Still need to incorporate API for this calculation button to work  -->
-<button>Calculate</button>
+<!-- Still need to incorporate API for this calculation button to actually work  -->
+<html>
+  <div style="text-align: center;">
+    <button style="font-size:24px; border-radius: 10px; border-color: rgb(255, 255, 255); position: absolute;" id="outputButton">Calculate</button><br>
+    <p style="font-size:20px; padding-top: 30px; text-align: center;"><font color = "#ffffc2"><t id = "output"></t></font></p>
+  </div>
+  <script>
+    document.getElementById("outputButton").onclick = function() {
+        document.getElementById("output").innerHTML = "This button does nothing!";
+    }
+  </script>
+</html>
+
