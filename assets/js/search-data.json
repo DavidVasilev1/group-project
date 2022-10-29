@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "User Interface",
-            "content": "Enter Your Academic Traits . . Select Your Gender: . Choose Gender Male Female Other . Select Your Ethnicity: . Choose Ethnicity White Hispanic African-American Asian Other . Select Your Major: . Choose Major Computer Science Business Biology Politics Engineering Social Sciences English Other . . Select Your Unweighted GPA: . . Document . . Document . Number of extracurriculars you participated in: . Submit . Document . Amount of awards you have won: . Submit . Document . Amount of leadership positions you have: . submit . Document . Select your SAT score (if applicable): . submit Your SAT score is: . . Document . Enter your ACT score (if applicable) submit Your ACT score is: . . Document . Enter your essay grade submit Your essay grade is: . . Calculate .",
+            "content": "Enter Your Academic Traits . . Select Your Gender: . Choose Gender Male Female Other . Select Your Ethnicity: . Choose Ethnicity White Hispanic African-American Asian Other . Select Your Major: . Choose Major Computer Science Business Biology Politics Engineering Social Sciences English Other . . Select Your Unweighted GPA: . . Document . . Number of extracurriculars you participated in: . Submit . Amount of awards you have won: . Submit . Amount of leadership positions you have: . Submit . Select your SAT score (if applicable): . . Select your ACT score (if applicable): . . Enter your essay grade: . . Calculate . .",
             "url": "https://davidvasilev1.github.io/group-project/project",
             "relUrl": "/project",
             "date": " • Oct 23, 2022"
