@@ -15,10 +15,6 @@ categories: [Week 1]
     background: white;
   }
 </style>
-<hr class="line1">
-
-{% include ui.html %}
-
 <body>
 
 <p>Translate this page:</p>
@@ -36,3 +32,6 @@ function googleTranslateElementInit() {
 <p>You can translate the content of this page by selecting a language in the select box.</p>
 
 </body>
+<hr class="line1">
+
+{% include ui.html %}
