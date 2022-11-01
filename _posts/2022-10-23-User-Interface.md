@@ -8,7 +8,13 @@ permalink: /project
 categories: [Week 1]
 ---
 
-# Please input your academic traits below. 
-# --------------------------------
+<h1 style="text-align:center"> Enter Your Academic Traits </h1>
+<style>
+  hr.line1 {
+    border: 2px solid white;
+    background: white;
+  }
+</style>
+<hr class="line1">
 
 {% include ui.html %}

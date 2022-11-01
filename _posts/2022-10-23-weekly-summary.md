@@ -18,7 +18,7 @@ This week, I completed the plan for what we will be doing in [Workflow](https://
 >
 This week, I completed the entire layout of how the project is going to work for our group. This included the authoring tool methods, the planned integration of programming languages in our project, our github sociology (how the branches are going to work), and our methods for deployment and testing. These components are going to be extremely important in the future when we are working on key components of our project. 
 
-## Front-end
+## Front-End
 >
 This week, I worked on the frontend side of the calculator page that we are attempting to create. I utilized an integration of HTML and JavaScript on our FastPages site to create dropdown menus for the user to input their personalized answers to the questions on the calculator. I also worked on the frontend design artifacts and made sure to consider certain possibilities of the user having limitations that may not allow them to complete the questions in the traditional calculator.
 
@@ -30,6 +30,7 @@ This week, I worked hard on creating our own API. First, I created a Google Shee
 
 ## Scrum Master
 >
+This week I completed the user interface with the help of the frontend, Samit. On the frontend, we added dropdowns, sliders, and textboxes for the users to enter their data, which will be used to calculate their chances for each college. We also added information pop-outs for the user to click on and read when they are unsure of what data to enter into the program. We also styled everything to make it easy to use and follow when used. Here is a link to the [user interface](https://davidvasilev1.github.io/group-project/project?). I also created a scrum board to keep track of all the things we need to do and what things we have already done.
 
 ## DevOps
 >
@@ -38,3 +39,4 @@ This week, I worked hard on creating our own API. First, I created a Google Shee
 >
 
 ## Back-End
+>
