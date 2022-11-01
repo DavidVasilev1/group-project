@@ -23,4 +23,3 @@ Currently we are trying to figure out why the table/API only works in the backen
 ![]({{site.baseurl}}/images/debug2.png)
 
 Above is the API, through table.html the table was imported under the templates folder in the flask. 
-
