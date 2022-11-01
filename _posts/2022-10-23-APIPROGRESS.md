@@ -9,7 +9,7 @@ categories: [Week 1]
 ---
 
 # API 
-adding on
+adding on, withering the essential backend
 To emphasize, as a backend developer, I constructed a data sheet full of plausible statistics for each ivy league college. The data was then transferred as an API through a CSV file, through this, we will now be able to integrate a calculator that bases off wether a student is eligible for any of these colleges through the data that is stored. 
 
 ![]({{site.baseurl}}/images/API.png)
