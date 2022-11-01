@@ -392,30 +392,32 @@
 </div>
 <!-- Slider: Essay -->
 <div>
-  <p style="font-size:20px;"> Enter your essay grade
+  <p style="font-size:20px;">Enter your essay grade
     <t class="popup" onclick="essayInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;">
       <span class="popuptext" id="essayPopup" style="font-size: 14px;">We have made a rubric on how to grade your essay <a href="https://davidvasilev1.github.io/group-project/essay?">here</a>.</span>
-    </t>: <font color = "#ffffc2">
-      <span id="essayResult"></span>
+    </t>: 
+    <font color = "#ffffc2">
+      <span id="essayScore"></span>
     </font>
   </p>
-    <div class="slidecontainer">
-      <input type="range" min="3" max="9" step="1" value="0" class="sliders" id="essayScore">
-    </div>
-<!-- Javascript -->
-  <script>
-    var sliderEssay = document.getElementById("essayScore");
-    var outputEssay = document.getElementById("essayResult");
-    outputEssay.innerHTML = sliderEssay.value;
-    sliderEssay.oninput = function() {
-      outputEssay.innerHTML = this.value;
-    }
-    function essayInfo() {
-      var popup = document.getElementById("essayPopup");
-      popup.classList.toggle("show");
-    }
-  </script>
+  <div class="slidecontainer">
+    <input type="range" min="3" max="9" step="1" value="0" class="sliders" id="essayResult">
+  </div>
+  <!-- Javascript -->
+    <script>
+      var sliderEssay = document.getElementById("essayResult");
+      var outputEssay = document.getElementById("essayScore");
+      outputEssay.innerHTML = sliderEssay.value;
+      sliderEssay.oninput = function() {
+        outputEssay.innerHTML = this.value;
+      }
+      function essayInfo() {
+        var popup = document.getElementById("essayPopup");
+        popup.classList.toggle("show");
+      }
+    </script>
 </div>
+
 <!-- Still need to incorporate API for this calculation button to actually work  -->
   <div style="text-align: center;">
     <button style="font-size:24px; border-radius: 10px; border-color: rgb(255, 255, 255); position: relative;" id="outputButton" onclick="output()">Calculate</button><br>
