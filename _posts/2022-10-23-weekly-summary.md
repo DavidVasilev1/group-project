@@ -34,6 +34,7 @@ This week I completed the user interface with the help of the frontend, Samit. O
 
 ## DevOps
 >
+I updated the scrum board with the tasks that I have to complete with Akshat (backend). On the frontend, I also assisted with creating the college application essay rubric (along with its button on the homepage), as it is a part of the calculator as a whole. 
 
 ## Front-End
 >
