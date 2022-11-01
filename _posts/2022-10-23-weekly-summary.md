@@ -24,7 +24,8 @@ categories: [Weekly Summary]
   <p>You can translate the content of this page by selecting a language in the select box.</p>
   
 </body>
-
+<br>
+<br>
 # Week 1 Summary
 
 ## Scrum Master

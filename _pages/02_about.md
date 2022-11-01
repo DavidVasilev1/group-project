@@ -22,6 +22,9 @@ toc: true
   
 </body>
 
+<br>
+<br>
+
 ## Summary
 >
 This is our Ivy League College Calculator. Students will enter certain data about themselves and this program will determine the chance that they have of getting into each Ivy League college. This page describes the systems and processes we used while creating this program, as well as the systems we are still using to continue to maintain and update the program as the needs of our users change.

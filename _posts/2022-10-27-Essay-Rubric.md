@@ -24,7 +24,8 @@ categories: [Self Grading your Essay]
   <p>You can translate the content of this page by selecting a language in the select box.</p>
   
 </body>
-
+<br>
+<br>
 <h1 style="text-align:center"> Grading Your College Application Essays:</h1>
 <style>
   hr.line1 {

@@ -24,7 +24,8 @@ categories: [Week 1]
   <p>You can translate the content of this page by selecting a language in the select box.</p>
   
 </body>
-
+<br>
+<br>
 <h1 style="text-align:center"> Enter Your Academic Traits </h1>
 <style>
   hr.line1 {
