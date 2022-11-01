@@ -9,7 +9,6 @@ categories: [Week 1]
 ---
 
 # API 
-adding on, withering the essential backend, why not tho? But we can obviously continue to add more for week 11. Essentially, the backend is to create more data overall
 To emphasize, as a backend developer, I constructed a data sheet full of plausible statistics for each ivy league college. The data was then transferred as an API through a CSV file, through this, we will now be able to integrate a calculator that bases off wether a student is eligible for any of these colleges through the data that is stored. 
 
 ![]({{site.baseurl}}/images/API.png)
