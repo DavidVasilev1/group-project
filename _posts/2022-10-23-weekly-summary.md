@@ -34,6 +34,7 @@ This week I completed the user interface with the help of the frontend, Samit. O
 
 ## DevOps
 >
+I updated the scrum board with the tasks that I have to complete with Akshat (backend). On the frontend, I also assisted with creating the college application essay rubric (along with its button on the homepage), as it is a part of the calculator as a whole. 
 
 ## Front-End
 > This week, I worked on the frontend side of the calculator page. Together, with David (Scrum Master), we utilized JavaScript and HTML in order to better the dropdown and slider mechanisms. We are currently working on working with the obligations of English learners by developing an algorithm that successfully allows user to translate all the English words to Spanish. Other languages are being considered. We have altered the design artifacts slightly in order to better compensate with a more enhanced UI. 
