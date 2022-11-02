@@ -156,7 +156,11 @@
 <!-- Choices  -->
   <div>
     <form>
-      <p style="font-size:20px;">Select Your Ethnicity: <font color = "#ffffc2"><t id = "ethnicity"></t></font></p>
+      <p style="font-size:20px;">Select Your Ethnicity: 
+        <font color = "#ffffc2">
+          <t id = "ethnicity"></t>
+        </font>
+      </p>
       <div style="text-align: center;">  
         <select id="ethnicityList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="eth()">
             <option hidden> ---Choose Ethnicity--- </option>  
@@ -193,7 +197,8 @@
         </t>: 
         <font color = "#ffffc2">
           <t id = "major"></t>
-        </font></p>
+        </font>
+      </p>
       <div style="text-align: center;">  
         <select id="majorList" style="font-size:18px; border-radius: 10px; border-color: rgb(255, 255, 255);" onchange="maj()">
             <option hidden> ---Choose Major--- </option>  
@@ -432,5 +437,64 @@
         document.getElementById("output").innerHTML = outputEssay;
     }
   </script>
-
-
+  <br>
+  <br>
+  <p style="font-size:20px;">Your selected gender: 
+    <font color = "#ffffc2">
+      <t id = "gender"></t>
+    </font>
+  </p>
+  <br>
+  <p style="font-size:20px;">Your selected ethnicity: 
+    <font color = "#ffffc2">
+      <t id = "ethnicity"></t>
+    </font>
+  </p>
+  <br>
+  <p style="font-size:20px;">Your selected major:
+    <font color = "#ffffc2">
+      <t id = "major"></t>
+    </font>
+  </p>
+  <br>
+  <p style="font-size:20px;">Your Unweighted GPA:
+    <font color = "#ffffc2">
+      <span id="GPA"></span>
+    </font>
+  </p>
+  <br>
+  <p style="font-size:20px;">Your extracurricular count:
+    <font color = "#ffffc2">
+      <t id = "ecResult"></t>
+    </font>
+  </p>
+  <br>
+  <p style="font-size:20px;">Your award count:
+    <font color = "#ffffc2">
+      <t id = "awardResult"></t>
+    </font>
+  </p>
+  <br>
+  <p style="font-size:20px;">Leadership position count:
+    <font color = "#ffffc2">
+      <t id = "leadResult"></t>
+    </font>
+  </p>
+  <br>
+  <p style="font-size:20px;">Your SAT Score:
+    <font color = "#ffffc2">
+      <span id="SATResults"></span>
+    </font>
+  </p>
+<br>
+<p style="font-size:20px;">Your ACT Score:
+  <font color = "#ffffc2">
+    <span id="ACTResult"></span>
+  </font>
+</p>
+<br>
+<p style="font-size:20px;">Your Essay Grade:
+  <font color = "#ffffc2">
+    <span id="essayScore"></span>
+  </font>
+</p>
