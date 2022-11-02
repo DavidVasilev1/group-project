@@ -523,6 +523,21 @@ window.onload = wrap_img;
     }
   </script>
 
+<div id="google_translate_element"></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script type="text/javascript"&gt;
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+            {pageLanguage: 'en'},
+            'google_translate_element'
+        );
+    }
+&lt;/script&gt;
+ 
+&lt;script type="text/javascript"
+        src= "https://translate.google.com/translate_a/element.js? cb=googleTranslateElementInit"&gt;
+&lt;/script&gt;
+</code></pre></div></div>
 
   </div><!-- from https://github.com/utterance/utterances -->
 <script src="https://utteranc.es/client.js"
