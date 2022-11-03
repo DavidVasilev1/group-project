@@ -402,16 +402,16 @@
       <span class="popuptext" id="essayPopup" style="font-size: 14px;">We have made a rubric on how to grade your essay <a href="https://davidvasilev1.github.io/group-project/essay?">here</a>.</span>
     </t>: 
     <font color = "#ffffc2">
-      <span id="essayScore"></span>
+      <span id="essayResult"></span>
     </font>
   </p>
   <div class="slidecontainer">
-    <input type="range" min="3" max="9" step="1" value="0" class="sliders" id="essayResult">
+    <input type="range" min="3" max="9" step="1" value="0" class="sliders" id="essayScore">
   </div>
   <!-- Javascript -->
     <script>
-      var sliderEssay = document.getElementById("essayResult");
-      var outputEssay = document.getElementById("essayScore");
+      var sliderEssay = document.getElementById("essayScore");
+      var outputEssay = document.getElementById("essayResult");
       outputEssay.innerHTML = sliderEssay.value;
       sliderEssay.oninput = function() {
         outputEssay.innerHTML = this.value;
@@ -431,7 +431,7 @@
         <t id = "output"></t>
       </font></p>
   </div>
-  <script>
+<!-- <script>
     var outputEssay = document.getElementById("genderList");
     function output() {
         document.getElementById("output").innerHTML = outputEssay;
@@ -497,4 +497,4 @@
   <font color = "#ffffc2">
     <span id="essayScore"></span>
   </font>
-</p>
+</p> -->
