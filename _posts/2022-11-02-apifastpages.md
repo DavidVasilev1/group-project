@@ -35,14 +35,11 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
     <th>ACT Score</th>
     <th>Gender</th>
     <th>Essay</th>
-    <th>
-    <>
-    <th>
   </tr>
-  </thead>
-  <tbody id="result">
+</thead>
+<tbody id="result">
     <!-- javascript generated data -->
-  </tbody>
+</tbody>
 </table>
 
 <!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
@@ -52,16 +49,16 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
   const resultContainer = document.getElementById("result");
 
   // keys for joke reactions
-  const Name = "college";
+  const name = "college";
   const GPA = "gpa";
   const ec = "ec";
   const awards = "award";
   const leadership = "lead";
   const white = "white";
   const hispanic = "hispanic";
-  const africanamerian = "africanamerican";
+  const africanamerican = "africanamerican";
   const asian = "asian";
-  const other = "otherrace";
+  const other_race = "otherrace";
   const cs = "cs";
   const business = "business";
   const biology = "bio";
@@ -69,7 +66,7 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
   const engineering = "engineer";
   const ss = "ss";
   const english = "english";
-  const other = "othermajor";
+  const other_major = "othermajor";
   const acceptance = "acceptrate";
   const SAT = "sat";
   const ACT = "act";
@@ -78,9 +75,7 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
   const essay = "essay";
 
   // prepare fetch urls
-  const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
-  const like_url = url + "/like/";  // haha reaction
-  const jeer_url = url + "/jeer/";  // boohoo reaction
+  const url = "https://sadv.nighthawkcodescrums.gq/api/college/";
 
   // prepare fetch GET options
   const options = {
@@ -113,35 +108,15 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
             const tr = document.createElement("tr");
             
             // td for joke cell
-            const joke = document.createElement("td");
-              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
+            const college = document.createElement("td");
+              name.innerHTML = row.id + ". " + row.name;  // add fetched data to innerHTML
+            const gpa = document.createElement("td");
+              GPA.innerHTML = row.id + ". " + row.GPA;
+            const extra = document.createElement("td");
+              ec.innerHTML = row.id + ". " + row.ec;
 
-            // td for haha cell with onclick actions
-            const haha = document.createElement("td");
-              const haha_but = document.createElement('button');
-              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
-              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
-              haha_but.onclick = function () {
-                // onclick function call with "like parameters"
-                reaction(HAHA, like_url+row.id, haha_but.id);  
-              };
-              haha.appendChild(haha_but);  // add "haha button" to haha cell
-
-            // td for boohoo cell with onclick actions
-            const boohoo = document.createElement("td");
-              const boohoo_but = document.createElement('button');
-              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
-              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
-              boohoo_but.onclick = function () {
-                // onclick function call with "jeer parameters"
-                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
-              };
-              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
-             
             // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(joke);
-            tr.appendChild(haha);
-            tr.appendChild(boohoo);
+            tr.appendChild(college);
 
             // this adds all the tr (row) work above to the HTML "result" container
             resultContainer.appendChild(tr);
@@ -152,37 +127,6 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
   .catch(err => {
     error(err + " " + url);
   });
-
-  // Reaction function to likes or jeers user actions
-  function reaction(type, put_url, elemID) {
-
-    // fetch the API
-    fetch(put_url, put_options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors
-      if (response.status !== 200) {
-          error("PUT API response failure: " + response.status)
-          return;  // api failure
-      }
-      // valid response will have JSON data
-      response.json().then(data => {
-          console.log(data);
-          // Likes or Jeers updated/incremented
-          if (type === HAHA) // like data element
-            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
-          else if (type === BOOHOO) // jeer data element
-            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
-          else
-            error("unknown type: " + type);  // should never occur
-      })
-    })
-    // catch fetch errors (ie Nginx ACCESS to server blocked)
-    .catch(err => {
-      error(err + " " + put_url);
-    });
-    
-  }
 
   // Something went wrong with actions or responses
   function error(err) {
