@@ -529,16 +529,16 @@ window.onload = wrap_img;
       <span class="popuptext" id="essayPopup" style="font-size: 14px;">We have made a rubric on how to grade your essay <a href="https://davidvasilev1.github.io/group-project/essay?">here</a>.</span>
     </t>: 
     <font color="#ffffc2">
-      <span id="essayScore"></span>
+      <span id="essayResult"></span>
     </font>
   </p>
   <div class="slidecontainer">
-    <input type="range" min="3" max="9" step="1" value="0" class="sliders" id="essayResult" />
+    <input type="range" min="3" max="9" step="1" value="0" class="sliders" id="essayScore" />
   </div>
   <!-- Javascript -->
     <script>
-      var sliderEssay = document.getElementById("essayResult");
-      var outputEssay = document.getElementById("essayScore");
+      var sliderEssay = document.getElementById("essayScore");
+      var outputEssay = document.getElementById("essayResult");
       outputEssay.innerHTML = sliderEssay.value;
       sliderEssay.oninput = function() {
         outputEssay.innerHTML = this.value;
@@ -558,74 +558,73 @@ window.onload = wrap_img;
         <t id="output"></t>
       </font></p>
   </div>
-<script>
+<!-- <script>
     var outputEssay = document.getElementById("genderList");
     function output() {
         document.getElementById("output").innerHTML = outputEssay;
     }
   </script>
-
-<p><br />
-  <br /></p>
-<p style="font-size:20px;">Your selected gender: 
-    <font color="#ffffc2">
-      <t id="gender"></t>
+  <br>
+  <br>
+  <p style="font-size:20px;">Your selected gender: 
+    <font color = "#ffffc2">
+      <t id = "gender"></t>
     </font>
   </p>
-<p><br /></p>
-<p style="font-size:20px;">Your selected ethnicity: 
-    <font color="#ffffc2">
-      <t id="ethnicity"></t>
+  <br>
+  <p style="font-size:20px;">Your selected ethnicity: 
+    <font color = "#ffffc2">
+      <t id = "ethnicity"></t>
     </font>
   </p>
-<p><br /></p>
-<p style="font-size:20px;">Your selected major:
-    <font color="#ffffc2">
-      <t id="major"></t>
+  <br>
+  <p style="font-size:20px;">Your selected major:
+    <font color = "#ffffc2">
+      <t id = "major"></t>
     </font>
   </p>
-<p><br /></p>
-<p style="font-size:20px;">Your Unweighted GPA:
-    <font color="#ffffc2">
+  <br>
+  <p style="font-size:20px;">Your Unweighted GPA:
+    <font color = "#ffffc2">
       <span id="GPA"></span>
     </font>
   </p>
-<p><br /></p>
-<p style="font-size:20px;">Your extracurricular count:
-    <font color="#ffffc2">
-      <t id="ecResult"></t>
+  <br>
+  <p style="font-size:20px;">Your extracurricular count:
+    <font color = "#ffffc2">
+      <t id = "ecResult"></t>
     </font>
   </p>
-<p><br /></p>
-<p style="font-size:20px;">Your award count:
-    <font color="#ffffc2">
-      <t id="awardResult"></t>
+  <br>
+  <p style="font-size:20px;">Your award count:
+    <font color = "#ffffc2">
+      <t id = "awardResult"></t>
     </font>
   </p>
-<p><br /></p>
-<p style="font-size:20px;">Leadership position count:
-    <font color="#ffffc2">
-      <t id="leadResult"></t>
+  <br>
+  <p style="font-size:20px;">Leadership position count:
+    <font color = "#ffffc2">
+      <t id = "leadResult"></t>
     </font>
   </p>
-<p><br /></p>
-<p style="font-size:20px;">Your SAT Score:
-    <font color="#ffffc2">
+  <br>
+  <p style="font-size:20px;">Your SAT Score:
+    <font color = "#ffffc2">
       <span id="SATResults"></span>
     </font>
   </p>
-<p><br /></p>
+<br>
 <p style="font-size:20px;">Your ACT Score:
-  <font color="#ffffc2">
+  <font color = "#ffffc2">
     <span id="ACTResult"></span>
   </font>
 </p>
-<p><br /></p>
+<br>
 <p style="font-size:20px;">Your Essay Grade:
-  <font color="#ffffc2">
+  <font color = "#ffffc2">
     <span id="essayScore"></span>
   </font>
-</p>
+</p> -->
 
 
   </div><!-- from https://github.com/utterance/utterances -->
