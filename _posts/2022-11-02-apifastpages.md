@@ -49,30 +49,7 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
   const resultContainer = document.getElementById("result");
 
   // keys for joke reactions
-  const name = "college";
-  const GPA = "gpa";
-  const ec = "ec";
-  const awards = "award";
-  const leadership = "lead";
-  const white = "white";
-  const hispanic = "hispanic";
-  const africanamerican = "africanamerican";
-  const asian = "asian";
-  const other_race = "otherrace";
-  const cs = "cs";
-  const business = "business";
-  const biology = "bio";
-  const politics = "politics";
-  const engineering = "engineer";
-  const ss = "ss";
-  const english = "english";
-  const other_major = "othermajor";
-  const acceptance = "acceptrate";
-  const SAT = "sat";
-  const ACT = "act";
-  const gender = "gendermale";
-  const gender2 = "genderfemale";
-  const essay = "essay";
+
 
   // prepare fetch urls
   const url = "https://sadv.nighthawkcodescrums.gq/api/college/";
@@ -103,24 +80,36 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
       // valid response will have JSON data
       response.json().then(data => {
           console.log(data);
-          for (const row of data) {
-            // make "tr element" for each "row of data"
-            const tr = document.createElement("tr");
-            
-            // td for joke cell
-            const college = document.createElement("td");
-              name.innerHTML = row.id + ". " + row.name;  // add fetched data to innerHTML
-            const gpa = document.createElement("td");
-              GPA.innerHTML = row.id + ". " + row.GPA;
-            const extra = document.createElement("td");
-              ec.innerHTML = row.id + ". " + row.ec;
+          var order = ["college", "gpa", "ec", "award", "lead", "white", "hispanic", "africanamerican", "ec", "ec", "ec",]
+          Object.entries(college_lists).sort((a, b) => order.indexOf(a) - order.indexOf(b)).forEach(([k, v]) => {
 
-            // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(college);
+          })
+          Object.entries(college_lists).forEach(([k, v]) => {
+            console.log(row);
 
-            // this adds all the tr (row) work above to the HTML "result" container
-            resultContainer.appendChild(tr);
-          }
+              // tr for each row
+              const tr = document.createElement("tr");
+              // td for each column
+              const name = document.createElement("td");
+              const cases = document.createElement("td");
+              const deaths = document.createElement("td");
+              const active = document.createElement("td");
+
+              // data is specific to the API
+              name.innerHTML = row.country_name;
+              cases.innerHTML = row.cases; 
+              deaths.innerHTML = row.deaths; 
+              active.innerHTML = row.active_cases; 
+
+              // this builds td's into tr
+              tr.appendChild(name);
+              tr.appendChild(cases);
+              tr.appendChild(deaths);
+              tr.appendChild(active);
+
+              // add HTML to container
+              resultContainer.appendChild(tr);
+          })
       })
   })
   // catch fetch errors (ie Nginx ACCESS to server blocked)
