@@ -64,3 +64,4 @@ I updated the scrum board with the tasks that I have to complete with Akshat (ba
 
 Now we aim to add data for IN STATE & OUT OF STATE!
 
+Right now, embedding the API onto fastpages may be our biggest issue
