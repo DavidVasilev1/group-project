@@ -15,7 +15,7 @@ tags: [javascript, fetch, dom, getElementID, appendChild]
   <tr>
     <th>Name</th>
     <th>GPA</th>
-    <th># of Extra Cirriculars</th>
+    <th># of Extra Curriculars</th>
     <th># of Leadership Positions</th>
     <th>White</th>
     <th>Hispanic</th>
