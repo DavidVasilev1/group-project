@@ -9,14 +9,13 @@ layout: default
 
   {{ content | markdownify }}
 
-
+<!-- 
   {% if site.paginate %}
     {% assign rawposts = paginator.posts %}
   {% else %}
     {% assign rawposts = site.posts %}
   {% endif %}
 
-  <!-- Hide posts if front matter flag hide:true -->
   {% assign posts = ''|split:'' %}
   {% for post in rawposts %}
     {% if post.hide != true %}
@@ -24,7 +23,6 @@ layout: default
     {% endif %}
   {% endfor %}
 
-  <!-- Sort posts by rank, then date -->
   {% assign grouped_posts = posts | group_by: "sticky_rank" | sort: "name", "last" %}
   {% assign sticky_posts = ''|split:'' %}
   {% assign non_sticky_posts = '' | split:'' %}
@@ -38,7 +36,6 @@ layout: default
     {%- endif -%}
   {% endfor %}
 
-   <!-- Assemble final sorted posts array -->
   {% assign sticky_posts = sticky_posts | sort: "sticky_rank", "last" %}
   {% assign posts = sticky_posts | concat: non_sticky_posts %}
 
@@ -77,6 +74,6 @@ layout: default
       </div>
     {%- endif %}
 
-  {%- endif -%}
+  {%- endif -%} -->
 
 </div>
