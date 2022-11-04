@@ -201,7 +201,7 @@
   </div>
 </div>
 <!-- Slider: GPA -->
-<div>
+<div id="gpa">
   <p style="font-size:20px;">Select Your Unweighted GPA
     <t class="popup" onclick="GPAInfo()"><img src="images/info.png" style="height: 15px; width: 15px; padding-bottom: 5px; padding-right: 5px; margin-bottom: 10px;">
       <span class="popuptext" id="GPAPopup" style="font-size: 14px;">This is unweighted (0-4 scale) GPA.</span>
@@ -415,70 +415,59 @@
         <t id = "output"></t>
       </font></p>
   </div>
-<!-- <script>
-    var outputEssay = document.getElementById("genderList");
+<div>
+  <table style="width: 50%; border: 2px solid white; margin-left: auto; margin-right: auto;">
+    <tr>
+      <td>College</td>
+      <td>Percent Chance</td>
+    </tr>
+    <tr>
+      <td>Brown University</td>
+      <td id="brown"></td>
+    </tr>
+    <tr>
+      <td>Columbia University</td>
+      <td id="columbia"></td>
+    </tr>
+    <tr>
+      <td>Cornell University</td>
+      <td id="cornell"></td>
+    </tr>
+    <tr>
+      <td>Dartmouth College</td>
+      <td id="dart"></td>
+    </tr>
+    <tr>
+      <td>Harvard University</td>
+      <td id="harvard"></td>
+    </tr>
+    <tr>
+      <td>University of Pennsylvania</td>
+      <td id="penn"></td>
+    </tr>
+    <tr>
+      <td>Princeton University</td>
+      <td id="prince"></td>
+    </tr>
+    <tr>
+      <td>Yale University</td>
+      <td id="yale"></td>
+    </tr>
+  </table>
+</div>
+<script>
     function output() {
-        document.getElementById("output").innerHTML = outputEssay;
+      var counter = 0;
+        document.getElementById("brown").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        document.getElementById("columbia").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        document.getElementById("cornell").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        document.getElementById("dart").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        document.getElementById("harvard").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        document.getElementById("penn").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        document.getElementById("prince").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        document.getElementById("yale").innerHTML = (Math.random() * 25).toFixed(2) + "%";
+        counter++;
+        if (counter == 1)
+          document.getElementById("outputButton").disabled=true;
     }
   </script>
-  <br>
-  <br>
-  <p style="font-size:20px;">Your selected gender: 
-    <font color = "#ffffc2">
-      <t id = "gender"></t>
-    </font>
-  </p>
-  <br>
-  <p style="font-size:20px;">Your selected ethnicity: 
-    <font color = "#ffffc2">
-      <t id = "ethnicity"></t>
-    </font>
-  </p>
-  <br>
-  <p style="font-size:20px;">Your selected major:
-    <font color = "#ffffc2">
-      <t id = "major"></t>
-    </font>
-  </p>
-  <br>
-  <p style="font-size:20px;">Your Unweighted GPA:
-    <font color = "#ffffc2">
-      <span id="GPA"></span>
-    </font>
-  </p>
-  <br>
-  <p style="font-size:20px;">Your extracurricular count:
-    <font color = "#ffffc2">
-      <t id = "ecResult"></t>
-    </font>
-  </p>
-  <br>
-  <p style="font-size:20px;">Your award count:
-    <font color = "#ffffc2">
-      <t id = "awardResult"></t>
-    </font>
-  </p>
-  <br>
-  <p style="font-size:20px;">Leadership position count:
-    <font color = "#ffffc2">
-      <t id = "leadResult"></t>
-    </font>
-  </p>
-  <br>
-  <p style="font-size:20px;">Your SAT Score:
-    <font color = "#ffffc2">
-      <span id="SATResults"></span>
-    </font>
-  </p>
-<br>
-<p style="font-size:20px;">Your ACT Score:
-  <font color = "#ffffc2">
-    <span id="ACTResult"></span>
-  </font>
-</p>
-<br>
-<p style="font-size:20px;">Your Essay Grade:
-  <font color = "#ffffc2">
-    <span id="essayScore"></span>
-  </font>
-</p> -->
