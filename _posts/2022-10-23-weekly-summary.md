@@ -63,3 +63,4 @@ I updated the scrum board with the tasks that I have to complete with Akshat (ba
 > This week I primarily worked on adding more data and mostly figuring out how to transfer the API to the group flask so that we can embed it in the fastpages directory and use that data to calculate wether the user can get in an ivy league college based on their stats. I also added an iframe html site on the navbar which represents a bunch of data and graphs, the graphs added in depth complexity for each factor we collected data on.
 
 Now we aim to add data for IN STATE & OUT OF STATE!
+
