@@ -48,7 +48,8 @@ This week, I worked hard on creating our own API. First, I created a Google Shee
 
 ## Scrum Master
 >
-This week I completed the user interface with the help of the frontend, Samit. On the frontend, we added dropdowns, sliders, and textboxes for the users to enter their data, which will be used to calculate their chances for each college. We also added information pop-outs for the user to click on and read when they are unsure of what data to enter into the program. We also styled everything to make it easy to use and follow when used. Here is a link to the [user interface](https://davidvasilev1.github.io/group-project/project?). I also created a scrum board to keep track of all the things we need to do and what things we have already done. CSP RULES
+This week I completed the user interface with the help of the frontend, Samit. On the frontend, we added dropdowns, sliders, and textboxes for the users to enter their data, which will be used to calculate their chances for each college. We also added information pop-outs for the user to click on and read when they are unsure of what data to enter into the program. We also styled everything to make it easy to use and follow when used. Here is a link to the [user interface](https://davidvasilev1.github.io/group-project/project?). I also created a scrum board to keep track of all the things we need to do and what things we have already done. 
+
 
 ## DevOps
 >
@@ -59,4 +60,4 @@ I updated the scrum board with the tasks that I have to complete with Akshat (ba
 
 
 ## Back-End
-> This week I primarily worked on adding more data and mostly figuring out how to transfer the API to the group flask so that we can embed it in the fastpages directory and use that data to calculate wether the user can get in an ivy league college based on their stats. I also added an iframe html site on the navbar which represents a bunch of data and graphs
+> This week I primarily worked on adding more data and mostly figuring out how to transfer the API to the group flask so that we can embed it in the fastpages directory and use that data to calculate wether the user can get in an ivy league college based on their stats. I also added an iframe html site on the navbar which represents a bunch of data and graphs, the graphs added in depth complexity for each factor we collected data on
