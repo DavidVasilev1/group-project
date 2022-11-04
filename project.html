@@ -579,18 +579,58 @@ window.onload = wrap_img;
 </div>
 <script>
     function output() {
-      var counter = 0;
-        document.getElementById("brown").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        document.getElementById("columbia").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        document.getElementById("cornell").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        document.getElementById("dart").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        document.getElementById("harvard").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        document.getElementById("penn").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        document.getElementById("prince").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        document.getElementById("yale").innerHTML = (Math.random() * 25).toFixed(2) + "%";
-        counter++;
-        if (counter == 1)
-          document.getElementById("outputButton").disabled=true;
+      //gender if
+      if (genderList.options[genderList.selectedIndex].text="male") {
+        var percentGender = gendermale;
+
+      } else if (genderList.options[genderList.selectedIndex].text="female"){
+        var percentGender = genderfemale;
+
+      } else if (genderList.options[genderList.selectedIndex].text="other"){
+        var percentGender = genderfemale + gendermale;
+
+      }
+      //major if
+      if (majorList.options[majorList.selectedIndex].text="Computer Science") {
+        var percentMajor = cs;
+
+      } else if (majorList.options[majorList.selectedIndex].text="Business") {
+        var percentMajor = business;
+
+      } else if (majorList.options[majorList.selectedIndex].text="English") {
+        var percentMajor = english;
+
+      } else if (majorList.options[majorList.selectedIndex].text="Engineering") {
+        var percentMajor = engineer;
+
+      } else if (majorList.options[majorList.selectedIndex].text="Social Sciences") {
+        var percentMajor = ss;
+      
+      } else if (majorList.options[majorList.selectedIndex].text="Politics") {
+        var percentMajor = politics;
+
+      } else if (majorList.options[majorList.selectedIndex].text="Biology") {
+        var percentMajor = bio;
+
+      } else if (majorList.options[majorList.selectedIndex].text="Other") {
+        var percentMajor = othermajor;
+      }
+      //if ethnicity
+      if (ethnicityList.options[ethnicityList.selectedIndex].text="White") {
+        var percentEthnicity = white;
+
+      } else if (ethnicityList.options[ethnicityList.selectedIndex].text="Hispanic") {
+        var percentEthnicity = hispanic;
+
+      } else if (ethnicityList.options[ethnicityList.selectedIndex].text="African-American") {
+        var percentEthnicity = africanamerican;
+      
+      } else if (ethnicityList.options[ethnicityList.selectedIndex].text="Asian") {
+        var percentEthnicity = asian;
+
+      } else if (ethnicityList.options[ethnicityList.selectedIndex].text="Other") {
+        var percentEthnicity = otherrace;
+      }
     }
   </script>
 
